@@ -20,7 +20,6 @@ WIN_COMBINATIONS = [
 # board = ["X","X","X","O","O","X","O","X","O"]
 # board = [" "," "," "," "," "," "," "," ","O"]
 
-champ = "X"
 def won?(board)
   WIN_COMBINATIONS.each do |x|
     if board[x[0]] == "X" && board[x[1]] == "X" && board[x[2]] == "X"
@@ -59,13 +58,13 @@ def over?(board)
 end
 
 def winner(board)
-  value = "Z"
+  champ = "Z"
   if won?(board) == nil
     return nil
   elsif won?(board) == true
-    if value == "X"
+    if champ == "X"
       return "X"
-    elsif value == "O"
+    elsif champ == "O"
       return "O"
     end
   end
