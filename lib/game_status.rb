@@ -60,6 +60,5 @@ def winner(board)
   if won?(board) == nil
     return nil
   else
-    return champ
   end
 end
