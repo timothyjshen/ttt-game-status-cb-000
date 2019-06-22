@@ -61,7 +61,7 @@ end
 def winner(board)
   if won?(board) == nil
     return nil
-  if won?(board) == true 
+  elsif won?(board) == true
     return winner
   end
 end
