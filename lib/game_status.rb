@@ -26,7 +26,6 @@ def won?(board)
       champ = "X"
       return x
     elsif board[x[0]] == "O" && board[x[1]] == "O" && board[x[2]] == "O"
-      champ = "O"
       return x
     end
   end
@@ -58,14 +57,9 @@ def over?(board)
 end
 
 def winner(board)
-  champ = "Z"
   if won?(board) == nil
     return nil
   else
-    if champ == "X"
-      return "X"
-    elsif champ == "O"
-      return "O"
-    end
+    return champ
   end
 end
