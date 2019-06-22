@@ -61,7 +61,7 @@ def winner(board)
   champ = "Z"
   if won?(board) == nil
     return nil
-  elsif won?(board) == true
+  else
     if champ == "X"
       return "X"
     elsif champ == "O"
