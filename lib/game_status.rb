@@ -59,12 +59,13 @@ def over?(board)
 end
 
 def winner(board)
+  value = "Z"
   if won?(board) == nil
     return nil
   elsif won?(board) == true
-    if winner == "X"
+    if value == "X"
       return "X"
-    elsif winner == "O"
+    elsif value == "O"
       return "O"
     end
   end
