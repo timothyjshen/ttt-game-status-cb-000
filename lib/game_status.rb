@@ -20,6 +20,7 @@ WIN_COMBINATIONS = [
 # board = ["X","X","X","O","O","X","O","X","O"]
 # board = [" "," "," "," "," "," "," "," ","O"]
 
+
 def won?(board)
   WIN_COMBINATIONS.each do |x|
     if board[x[0]] == "X" && board[x[1]] == "X" && board[x[2]] == "X"
@@ -38,7 +39,7 @@ def full?(board)
 end
 
 def draw?(board)
-  won?(board).nil && full?(board)
+  won?(board) == false && full?(board) == true
 end
 
 def over?(board)
